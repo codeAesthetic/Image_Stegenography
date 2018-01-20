@@ -1,0 +1,24 @@
+package Steg;
+
+import javafx.scene.image.Image;
+
+public class Model {
+
+    private Encoder encoder;
+    private Decoder decoder;
+
+    public Model(Encoder encoder,Decoder decoder){
+        this.encoder = encoder;
+        this.decoder = decoder;
+    }
+    public Image encode(Image image, String msg){
+        return encoder.encode(image,msg);
+    }
+
+    public String decode(Image image){
+
+        return decoder.decode(image);
+    }
+
+
+}
